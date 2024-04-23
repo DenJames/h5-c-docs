@@ -45,6 +45,7 @@ if (mariadb_connect("localhost", "db_user", "db_pass", "my_db", 3306)) {
 
 ```
 
+### mariadb_insert
 
 ```C
 extern bool mariadb_insert(char *query);
