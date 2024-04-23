@@ -3,7 +3,7 @@ sidebar_position: 1
 title: API
 ---
 
-# Create a Blog Post
+# LCD Grove API Overview
 
 This document provides an overview of the LCD Display API available in our project. It is intended to help developers understand and use the API effectively.
 

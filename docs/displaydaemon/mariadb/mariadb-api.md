@@ -3,7 +3,7 @@ sidebar_position: 1
 title: API
 ---
 
-# MariaDB Functionality
+# MariaDB API Overview
 
 This document provides an overview of the MariaDB functionality available in our project. It is intended to help developers understand and use the API effectively.
 
