@@ -1,0 +1,8 @@
+{
+  "label": "MCP Temperature Sensor",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Various templates for different MD types"
+  }
+}
