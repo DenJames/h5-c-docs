@@ -9,7 +9,7 @@ tags:
  - C
 ---
 
-# Button Functionality
+# Button API Overview
 
 :::warning
 This requires a Blue LED button from seed, and it has to be placed in Digital I/O - GPIO_50 on the Grove Base Cape
