@@ -3,7 +3,7 @@ sidebar_position: 1
 title: API
 ---
 
-# MariaDB Functionality
+# MariaDB API Overview
 
 This document provides an overview of the MariaDB functionality available in our project. It is intended to help developers understand and use the API effectively.
 
@@ -37,6 +37,7 @@ extern bool mariadb_connect(char *host, char *user, char *password, char *databa
 
 **Example Usage:**
 ```C
+// Attempts to initialize a connection to the database and returns a response accordingly
 if (mariadb_connect("localhost", "db_user", "db_pass", "my_db", 3306)) {
     printf("Connection established.\n");
 } else {
@@ -61,10 +62,12 @@ extern bool mariadb_insert(char *query);
 
 **Example Usage:**
 ```C
+// Attempts to insert the data into the database, and returns a response accordingly
 char *query = "INSERT INTO users (username, age) VALUES ('john_doe', 30);";
 if (mariadb_insert(query)) {
     printf("Data inserted successfully.\n");
 } else {
     fprintf(stderr, "Insert failed: %s\n", mysql_error(conn));
 }
+```
 
