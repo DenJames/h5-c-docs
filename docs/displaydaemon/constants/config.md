@@ -11,7 +11,13 @@ tags:
 This is the configuration file where you can specify the diffrent variables for the program, and not functions.
 :::
 
-```C md title="constants.h"
+To use the variables in your project you need to include it in your c file
+```C
+#include "constants.h"
+```
+
+### Default in our project
+```c md title="constants.h"
 // LCD
 #define DISPLAY_COLOR_CODE 0x05
 #define LCD_ADR 0x3e
