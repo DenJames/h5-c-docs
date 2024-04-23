@@ -19,7 +19,7 @@ Before using the functions described below, ensure to include the `mariadb.h` he
 
 This function is used to establish a connection to a MariaDB database.
 
-```C
+```C title="mariadb.h"
 extern bool mariadb_connect(char *host, char *user, char *password, char *database, int port);
 ```
 
