@@ -5,6 +5,10 @@ title: API
 
 # LCD Grove API Overview
 
+:::warning
+This requires an LCD display to be placed on your BBB
+:::
+
 This document provides an overview of the LCD Display API available in our project. It is intended to help developers understand and use the API effectively.
 
 Before using the functions described below, ensure to include the `Grove_LCD.h` header file in your source files where database operations are required.
