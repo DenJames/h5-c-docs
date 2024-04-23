@@ -1,35 +1,99 @@
 ---
 sidebar_position: 1
-title: Functions
+title: Header
+tags:
+ - gpio
+ - button
+ - Blue LED button
+ - seeed
+ - C
 ---
 
-# Create a Blog Post
+# Functions
+:::danger
+This requires a Blue LED button from seed, and it has to be placed in Digital I/O - GPIO_50 on the Grove Base Cape
+:::
 
-Docusaurus creates a **page for each blog post**, but also a **blog index page**, a **tag system**, an **RSS** feed...
+This document will describe the diffrent functions that you can you to get started with the Blue LED button
 
-## Create your first Post
-
-Create a file at `blog/2021-02-28-greetings.md`:
-
-```md title="blog/2021-02-28-greetings.md"
----
-slug: greetings
-title: Greetings!
-authors:
-  - name: Joel Marcey
-    title: Co-creator of Docusaurus 1
-    url: https://github.com/JoelMarcey
-    image_url: https://github.com/JoelMarcey.png
-  - name: Sébastien Lorber
-    title: Docusaurus maintainer
-    url: https://sebastienlorber.com
-    image_url: https://github.com/slorber.png
-tags: [greetings]
----
-
-Congratulations, you have made your first post!
-
-Feel free to play around and edit this post as much as you like.
+```C md title="button.h"
+extern bool button_release();
+extern bool button_init();
+extern void start_button_listener();
+extern void stop_button_listener();
 ```
 
-A new blog post is now available at [http://localhost:3000/blog/greetings](http://localhost:3000/blog/greetings).
+# button_init();
+This is used to initilise the gpoi pin connection to the button so we can handle button presses
+So in the main file you should run this function if you want to use the button in your project.
+```C md title="main.c"
+#include <stdio.h>
+
+#include "button.h"
+
+int main(void) {
+  if (!button_init()) {
+    return 0;
+  }
+  ... code
+}
+```
+
+# start_button_listener();
+This is used to start the button press listener, when the button is pressed it will publish a message to mosquito with the tag `alert/cancel` you can then use that to stop the listener or something else.
+
+```C md title="main.c"
+#include <stdio.h>
+
+#include "button.h"
+
+int main(void) {
+  if (!button_init()) {
+    return 0;
+  }
+  start_button_listener();
+  ... code
+}
+```
+
+# stop_button_listener();
+This is used to stop the button press listener.
+```C md title="main.c"
+#include <stdio.h>
+#include <unistd.h>
+
+#include "button.h"
+
+int main(void) {
+  if (!button_init()) {
+    return 0;
+  }
+  start_button_listener();
+  sleep(5) # sleep 5 secounds
+  stop_button_listener();
+  ... code
+}
+```
+
+# button_release();
+This function is used to release the gpio lock so other programs can use it
+
+```C md title="main.c"
+#include <stdio.h>
+#include <unistd.h>
+
+#include "button.h"
+
+int main(void) {
+  if (!button_init()) {
+    return 0;
+  }
+  start_button_listener();
+  sleep(5) # sleep 5 secounds
+  stop_button_listener();
+  if (!button_release()) {
+    return 0;
+  }
+  ... code
+}
+```
