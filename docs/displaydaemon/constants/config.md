@@ -41,9 +41,13 @@ This is the configuration file where you can specify the diffrent variables for 
 
 ### DISPLAY_COLOR_CODE
 This is used to specify the primary color of the Grove LCD Display and it goes between 0x00 to 0x15
+
 0x10 RED
+
 0x01 BLUE
+
 0x04 GREEN
+
 0x15 RGB = White (Sort of)
 
 ### LCD_ADR
