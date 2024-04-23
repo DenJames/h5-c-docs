@@ -139,7 +139,7 @@ extern void display_color(uint8_t color);
 display_color(0x05)
 ```
 
-### Error Handling
+## Error Handling
 
 When intefering with the display, ensure to check the return values of i2c_init and write_to_buff functions for a successful operation. The mutex locks within display_write_line function help in thread-safe operations when dealing with I2C communication.
 
