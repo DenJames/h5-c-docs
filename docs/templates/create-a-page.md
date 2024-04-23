@@ -1,8 +1,14 @@
 ---
 sidebar_position: 1
+title: Create a page
 ---
 
-# Create a Page
+### Caution example
+:::caution
+
+This is just an example of how to create a banner
+
+:::
 
 Add **Markdown or React** files to `src/pages` to create a **standalone page**:
 
