@@ -5,6 +5,10 @@ title: API
 
 # MQTT Communication API
 
+:::notice
+To get Mosquitto to work, you need to install mosquitto-dev using "apt install mosquitto-dev".
+:::
+
 This document outlines the MQTT communication functions available in our project, aimed at enabling seamless message publishing and subscription using the MQTT protocol.
 
 Before using these functions, ensure to include the `mqtt.h` header file in your source files.

@@ -5,6 +5,10 @@ title: API
 
 # MariaDB API Overview
 
+:::notice
+To get MariaDB to work, you need to install libmariadb3 and libmariadb-dev using "apt install libmariadb3 libmariadb-dev".
+:::
+
 This document provides an overview of the MariaDB functionality available in our project. It is intended to help developers understand and use the API effectively.
 
 Before using the functions described below, ensure to include the `mariadb.h` header file in your source files where database operations are required.
