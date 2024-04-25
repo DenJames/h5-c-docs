@@ -1,0 +1,8 @@
+{
+  "label": "Beeper",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Beeper function to use"
+  }
+}

@@ -78,7 +78,7 @@ extern void stop_button_listener();
 
 **Example Usage:**
 ```C md title="main.c"
-start_button_listener();
+stop_button_listener();
 ```
 
 ### button_release
