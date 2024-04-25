@@ -5,7 +5,7 @@ title: API
 
 # MQTT Communication API
 
-:::notice
+:::note
 To get Mosquitto to work, you need to install mosquitto-dev using "apt install mosquitto-dev".
 :::
 

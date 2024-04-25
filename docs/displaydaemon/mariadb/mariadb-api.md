@@ -5,7 +5,7 @@ title: API
 
 # MariaDB API Overview
 
-:::notice
+:::note
 To get MariaDB to work, you need to install libmariadb3 and libmariadb-dev using "apt install libmariadb3 libmariadb-dev".
 :::
 
